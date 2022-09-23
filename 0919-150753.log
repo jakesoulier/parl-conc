@@ -1,0 +1,24 @@
+15:07:53| number=10
+15:07:53| Thread-1, x=1, sum=2
+15:07:53| Thread-1, x=2, sum=5
+15:07:53| Thread-1, x=3, sum=9
+15:07:53| Thread-1, x=4, sum=14
+15:07:53| Thread-1, x=5, sum=20
+15:07:53| Thread-1, x=6, sum=27
+15:07:53| Thread-1, x=7, sum=35
+15:07:53| Thread-1, x=8, sum=44
+15:07:53| Thread-1, x=9, sum=54
+15:07:53| Thread-1, x=10, sum=65
+15:07:53| Thread-1, final sum using run=10
+15:07:53| Thread-2, x=1, sum=12
+15:07:53| Thread-2, x=2, sum=25
+15:07:53| Thread-2, x=3, sum=39
+15:07:53| Thread-2, x=4, sum=54
+15:07:53| Thread-2, x=5, sum=70
+15:07:53| Thread-2, x=6, sum=87
+15:07:53| Thread-2, x=7, sum=105
+15:07:53| Thread-2, x=8, sum=124
+15:07:53| Thread-2, x=9, sum=144
+15:07:53| Thread-2, x=10, sum=165
+15:07:53| Thread-2, final sum using run=20
+15:07:53| Return values from create_threads: actual_from_class=45, actual_from_thread_mod=20

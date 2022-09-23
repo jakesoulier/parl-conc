@@ -1,0 +1,15 @@
+14:40:43| number=10
+14:40:43| Return values from create_threads:
+	actual_from_class=<MyThread(Thread-1, stopped 7504)>, actual_from_thread_mod=30
+14:40:43| ERROR: Test #1 failed, check console for reason
+14:40:43| ERROR: Test #2 failed, check console for reason
+14:40:43| number=13
+14:40:43| Return values from create_threads:
+	actual_from_class=<MyThread(Thread-5, stopped 8744)>, actual_from_thread_mod=60
+14:40:43| ERROR: Test #1 failed, check console for reason
+14:40:43| ERROR: Test #2 failed, check console for reason
+14:40:43| number=17
+14:40:43| Return values from create_threads:
+	actual_from_class=<MyThread(Thread-9, stopped 13904)>, actual_from_thread_mod=90
+14:40:43| ERROR: Test #1 failed, check console for reason
+14:40:43| ERROR: Test #2 failed, check console for reason

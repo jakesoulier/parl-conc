@@ -24,7 +24,7 @@ from cse251 import *
 prime_count = 0
 numbers_processed = 0
 
-def is_prime(n: int) -> bool:
+def is_prime(n: int):
     global numbers_processed
     numbers_processed += 1
 
@@ -42,6 +42,12 @@ def is_prime(n: int) -> bool:
         i += 6
     return True
 
+def prime_sum(begin, end):
+        global prime_count
+        for x in range(begin, end):
+            if is_prime(x):
+                prime_count += 1
+
 
 if __name__ == '__main__':
     log = Log(show_terminal=True)
@@ -53,11 +59,31 @@ if __name__ == '__main__':
 
     start = 10000000000
     range_count = 100000
-    for i in range(start, start + range_count):
-        if is_prime(i):
-            prime_count += 1
-            print(i, end=', ', flush=True)
-    print(flush=True)
+    increment = 10000
+    # for i in range(start, range_count):
+    # for x in range(start, start+range_count):
+    
+    
+                
+    updated_start = start
+    for x in range(10):
+        t = threading.Thread(target=prime_sum, args=(updated_start, updated_start + increment))
+        updated_start += 10000
+        t.start()
+        t.join()
+    
+    
+    # for x in range(4):
+        
+        
+        
+        
+        
+    #     if is_prime(i):
+    #         prime_count += 1
+    #         print(i, end=', ', flush=True)
+    # print(flush=True)
+    
 
     # Should find 4306 primes
     log.write(f'Numbers processed = {numbers_processed}')

@@ -1,0 +1,24 @@
+15:05:26| number=<function count at 0x0000020AB9D33D00>
+15:05:26| Thread-1, count_local=1, count_global=1
+15:05:26| Thread-1, count_local=2, count_global=2
+15:05:26| Thread-1, count_local=3, count_global=3
+15:05:26| Thread-1, count_local=4, count_global=4
+15:05:26| Thread-1, count_local=5, count_global=5
+15:05:26| Thread-1, count_local=6, count_global=6
+15:05:26| Thread-1, count_local=7, count_global=7
+15:05:26| Thread-1, count_local=8, count_global=8
+15:05:26| Thread-1, count_local=9, count_global=9
+15:05:26| Thread-1, count_local=10, count_global=10
+15:05:26| Thread-1, final sum using run=10
+15:05:26| Thread-2, count_local=1, count_global=11
+15:05:26| Thread-2, count_local=2, count_global=12
+15:05:26| Thread-2, count_local=3, count_global=13
+15:05:26| Thread-2, count_local=4, count_global=14
+15:05:26| Thread-2, count_local=5, count_global=15
+15:05:26| Thread-2, count_local=6, count_global=16
+15:05:26| Thread-2, count_local=7, count_global=17
+15:05:26| Thread-2, count_local=8, count_global=18
+15:05:26| Thread-2, count_local=9, count_global=19
+15:05:26| Thread-2, count_local=10, count_global=20
+15:05:26| Thread-2, final sum using run=20
+15:05:26| Return values from create_threads: actual_from_class=45, actual_from_thread_mod=20

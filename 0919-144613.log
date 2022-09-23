@@ -1,0 +1,33 @@
+14:46:13| number=10
+14:46:13| Thread-1, count_local=1, count_global=1
+14:46:13| Thread-1, count_local=2, count_global=2
+14:46:13| Thread-1, count_local=3, count_global=3
+14:46:13| Thread-1, count_local=4, count_global=4
+14:46:13| Thread-1, count_local=5, count_global=5
+14:46:13| Thread-1, count_local=6, count_global=6
+14:46:13| Thread-1, count_local=7, count_global=7
+14:46:13| Thread-1, count_local=8, count_global=8
+14:46:13| Thread-1, count_local=9, count_global=9
+14:46:13| Thread-1, count_local=10, count_global=10
+14:46:13| number=13
+14:46:13| Thread-2, count_local=1, count_global=11
+14:46:13| Thread-2, count_local=2, count_global=12
+14:46:13| Thread-2, count_local=3, count_global=13
+14:46:13| Thread-2, count_local=4, count_global=14
+14:46:13| Thread-2, count_local=5, count_global=15
+14:46:13| Thread-2, count_local=6, count_global=16
+14:46:13| Thread-2, count_local=7, count_global=17
+14:46:13| Thread-2, count_local=8, count_global=18
+14:46:13| Thread-2, count_local=9, count_global=19
+14:46:13| Thread-2, count_local=10, count_global=20
+14:46:13| number=17
+14:46:13| Thread-3, count_local=1, count_global=21
+14:46:13| Thread-3, count_local=2, count_global=22
+14:46:13| Thread-3, count_local=3, count_global=23
+14:46:13| Thread-3, count_local=4, count_global=24
+14:46:13| Thread-3, count_local=5, count_global=25
+14:46:13| Thread-3, count_local=6, count_global=26
+14:46:13| Thread-3, count_local=7, count_global=27
+14:46:13| Thread-3, count_local=8, count_global=28
+14:46:13| Thread-3, count_local=9, count_global=29
+14:46:13| Thread-3, count_local=10, count_global=30
