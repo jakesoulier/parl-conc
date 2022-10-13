@@ -80,11 +80,12 @@ class Factory(threading.Thread):
         # to create cars and to place them in a queue.
         self.car = []
         
-    def run(self, q):
+    def run(self, q, communication):
         for i in range(CARS_TO_PRODUCE):
             # TODO Add you code here
             car1 = Car()
             q.put(car1)
+            communication = True
             # print(f'Car: {car1} has been added to queue')
             """
             create a car
@@ -126,7 +127,7 @@ def main():
     log = Log(show_terminal=True)
 
     # TODO Create semaphore(s)
-    # sema = Semaphore()
+    communication = False
     # TODO Create queue251 
     q = Queue251()
     # TODO Create lock(s) ?
@@ -143,9 +144,9 @@ def main():
     log.start_timer()
 
     # TODO Start factory and dealership
-    fact.run(q)
+    fact.run(q, communication)
     # print(f'Queue stats: {queue_stats}')
-    deal.run(q, queue_stats)
+    deal.run(q, queue_stats, communication)
     # TODO Wait for factory and dealership to complete
 
     log.stop_timer(f'All {sum(queue_stats)} have been created')
