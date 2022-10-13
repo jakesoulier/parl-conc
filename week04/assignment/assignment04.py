@@ -86,6 +86,11 @@ if __name__ == '__main__':
     xaxis_cpus = []
     yaxis_times = []
 
+
+    # for cpu in range(0, CPU_COUNT + 1):
+    #       print(f'\ncpu = {cpu}')
+    
+    
     # TODO Process all frames trying 1 cpu, then 2, then 3, ... to CPU_COUNT
     #      add results to xaxis_cpus and yaxis_times
     image_number = 10

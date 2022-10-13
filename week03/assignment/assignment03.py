@@ -63,6 +63,7 @@ class myThread(threading.Thread):
     def run(self):
         global call_count
         call_count += 1
+        print(f'URL: {self.url}')
         response = requests.get(self.url)
         self.response = response.json()
         # self.film_six()
