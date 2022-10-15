@@ -91,12 +91,12 @@ class Factory(threading.Thread):
             # TODO Add you code her
             print(f'queue stats: {self.queue_stats}')
             # self.fact_com.acquire()
-            # self.deal_com.acquire()
+            self.deal_com.acquire()
             # car1 = Car()
             self.q.put(self.car[i])
             print(f'queue stats: {self.queue_stats}')
             # communication = True
-            # self.fact_com.release()
+            self.fact_com.release()
             # self.deal_com.release()
             print(f'Car: {self.car[i]} has been added to queue')
             """
@@ -123,7 +123,7 @@ class Dealer(threading.Thread):
 
     def run(self):
         while True:
-            # self.fact_com.acquire()
+            self.fact_com.acquire()
             # self.deal_com.acquire()
             # TODO Add your code here
             # print(queue_stats)
@@ -141,7 +141,7 @@ class Dealer(threading.Thread):
             signal the factory that there is an empty slot in the queue
             """
             print(f'Just sold: {eva_car}')
-            # self.deal_com.release()
+            self.deal_com.release()
             # self.fact_com.release()
             # Sleep a little after selling a car
             # Last statement in this for loop - don't change
