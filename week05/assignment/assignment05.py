@@ -12,6 +12,7 @@ Instructions:
 
 """
 
+from concurrent.futures import thread
 from multiprocessing import Semaphore
 import time
 import threading
@@ -21,7 +22,7 @@ import random
 from cse251 import *
 
 # Global Consts - Do not change
-CARS_TO_PRODUCE = 5 # 500
+CARS_TO_PRODUCE = 500 # 500
 MAX_QUEUE_SIZE = 10
 SLEEP_REDUCE_FACTOR = 50
 
@@ -75,18 +76,29 @@ class Queue251():
 class Factory(threading.Thread):
     """ This is a factory.  It will create cars and place them on the car queue """
 
-    def __init__(self):
+    def __init__(self, queue_stats,q,  fact_com, deal_com):
         # TODO, you need to add arguments that will pass all of data that 1 factory needs
         # to create cars and to place them in a queue.
-        self.car = []
+        # self.car = []
+        self.q = q
+        self.queue_stats = queue_stats
+        self.fact_com = fact_com
+        self.deal_com = deal_com
+        self.car = Car()
         
-    def run(self, q, communication):
+    def run(self):
         for i in range(CARS_TO_PRODUCE):
-            # TODO Add you code here
-            car1 = Car()
-            q.put(car1)
-            communication = True
-            # print(f'Car: {car1} has been added to queue')
+            # TODO Add you code her
+            print(f'queue stats: {self.queue_stats}')
+            # self.fact_com.acquire()
+            # self.deal_com.acquire()
+            # car1 = Car()
+            self.q.put(self.car[i])
+            print(f'queue stats: {self.queue_stats}')
+            # communication = True
+            # self.fact_com.release()
+            # self.deal_com.release()
+            print(f'Car: {self.car[i]} has been added to queue')
             """
             create a car
             place the car on the queue
@@ -94,31 +106,43 @@ class Factory(threading.Thread):
            """
 
         # signal the dealer that there there are not more cars
-        q.put('DONE')
+        # self.q.put('DONE')
 
 class Dealer(threading.Thread):
     """ This is a dealer that receives cars """
 
-    def __init__(self):
+    def __init__(self, q, queue_stats, fact_com, deal_com, thread_id):
         # TODO, you need to add arguments that pass all of data that 1 Dealer needs
         # to sell a car
-        self.sold_cars = []
+        self.q = q
+        self.queue_stats = queue_stats
+        self.fact_com = fact_com
+        self.deal_com = deal_com
+        self.thread_id = thread_id
+        # self.sold_cars = []
 
-    def run(self, q, queue_stats):
+    def run(self):
         while True:
+            # self.fact_com.acquire()
+            # self.deal_com.acquire()
             # TODO Add your code here
             # print(queue_stats)
-            # queue_stats += 1
-            eva_car = q.get()
+            self.queue_stats[self.thread_id] += 1
+            print(f'queue stats: {self.queue_stats[self.thread_id]}')
+            eva_car = self.q.get()
+            
             if eva_car == 'DONE':
                 break
             else:
-                self.sold_cars.append(eva_car)
+                self.q.put(eva_car)
+                # self.sold_cars.append(eva_car)
             """
             take the car from the queue
             signal the factory that there is an empty slot in the queue
             """
             print(f'Just sold: {eva_car}')
+            # self.deal_com.release()
+            # self.fact_com.release()
             # Sleep a little after selling a car
             # Last statement in this for loop - don't change
             time.sleep(random.random() / (SLEEP_REDUCE_FACTOR))
@@ -127,7 +151,8 @@ def main():
     log = Log(show_terminal=True)
 
     # TODO Create semaphore(s)
-    communication = False
+    fact_com = threading.Semaphore
+    deal_com = threading.Semaphore
     # TODO Create queue251 
     q = Queue251()
     # TODO Create lock(s) ?
@@ -138,15 +163,28 @@ def main():
     queue_stats = [0] * MAX_QUEUE_SIZE
 
     # TODO create your one factory
-    fact = Factory()
+    # fact = threading.Thread(target=Factory, args=(q, queue_stats, fact_com, deal_com))
+    fact = [threading.Thread(target=Factory, args=(q, queue_stats, fact_com, deal_com)) for i in range(CARS_TO_PRODUCE)]
     # TODO create your one dealership
-    deal = Dealer()
+    # deal = Dealer()
+    # deal = threading.Thread(target=Dealer, args=(q, queue_stats, fact_com, deal_com))
+    deal = [threading.Thread(target=Dealer, args=(q, queue_stats, fact_com, deal_com, i)) for i in range(CARS_TO_PRODUCE)]
     log.start_timer()
 
     # TODO Start factory and dealership
-    fact.run(q, communication)
+    # fact.run(q, communication)
+    # fact.start()
+    # deal.start()
+    for i in range(CARS_TO_PRODUCE):
+        fact[i].start()
+        deal[i].start()
+    # fact.join()
+    # deal.join()
+    for i in range(CARS_TO_PRODUCE):
+        fact[i].join()
+        deal[i].join()
     # print(f'Queue stats: {queue_stats}')
-    deal.run(q, queue_stats, communication)
+    # deal.run(q, queue_stats, communication)
     # TODO Wait for factory and dealership to complete
 
     log.stop_timer(f'All {sum(queue_stats)} have been created')
