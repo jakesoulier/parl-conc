@@ -89,7 +89,7 @@ class Factory(threading.Thread):
     def run(self):
         for i in range(CARS_TO_PRODUCE):
             # TODO Add you code her
-            print(f'queue stats: {self.queue_stats}')
+            # print(f'queue stats: {self.queue_stats}')
             # self.fact_com.acquire()
             self.deal_com.acquire()
             # car1 = Car()
