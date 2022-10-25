@@ -1,0 +1,7 @@
+15:35:13| Marble count                = 1000
+15:35:13| settings["creator-delay"]   = 0.01
+15:35:13| settings["bag-count"]       = 7
+15:35:13| settings["bagger-delay"]    = 0.05
+15:35:13| settings["assembler-delay"] = 0.05
+15:35:13| settings["wrapper-delay"]   = 0.05
+15:35:13| Create the processes
