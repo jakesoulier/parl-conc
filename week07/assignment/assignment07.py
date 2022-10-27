@@ -81,9 +81,13 @@ class Marble_Creator(mp.Process):
         'Brown', 'Gold', 'Blue-Green', 'Antique Bronze', 'Mint Green', 'Royal Blue', 
         'Light Orange', 'Pastel Blue', 'Middle Green')
 
-    def __init__(self):
+    def __init__(self, conn, marble_count):
         mp.Process.__init__(self)
         # TODO Add any arguments and variables here
+        # self.marble = marble
+        # self.colors = colors
+        self.conn = conn
+        self.marble_count = marble_count
 
     def run(self):
         '''
@@ -93,15 +97,26 @@ class Marble_Creator(mp.Process):
             sleep the required amount
         Let the bagger know there are no more marbles
         '''
-        pass
+        for x in range(self.marble_count):
+            marble = random.choice(self.colors)
+            self.conn.send(marble)
+            
+        self.conn.send('DONE')
+        
+        
 
 
 class Bagger(mp.Process):
     """ Receives marbles from the marble creator, then there are enough
         marbles, the bag of marbles are sent to the assembler """
-    def __init__(self):
+    def __init__(self, connMarble, connAssem, marble_count, bag_count):
         mp.Process.__init__(self)
         # TODO Add any arguments and variables here
+        self.marbles = {}
+        self.connMarble = connMarble
+        self.connAssem = connAssem
+        self.marble_count = marble_count
+        self.bag_count = bag_count
 
     def run(self):
         '''
@@ -111,6 +126,22 @@ class Bagger(mp.Process):
             sleep the required amount
         tell the assembler that there are no more bags
         '''
+        # while 'DONE' not in self.marbles:
+        for x in range(7):
+            # self.marbles.append(self.connMarble.recv())
+            # self.marbles['marbles'] = self.connMarble.recv()
+            if 'marbles' not in self.marbles:
+                self.marbles['marbles'] = []
+                self.marbles['marbles'].append(self.connMarble.recv())
+            else:
+                self.marbles['marbles'].append(self.connMarble.recv())
+            # thisdict.update({"color": "red"})
+            # print(f'marbles in dict: {self.marbles}')
+            if len(self.marbles['marbles']) == self.bag_count:
+                # print(self.marbles)
+                self.connAssem.send(self.marbles)
+        # self.connAssem.send('DONE')
+        
 
 
 class Assembler(mp.Process):
@@ -118,9 +149,12 @@ class Assembler(mp.Process):
         Sends the completed gift to the wrapper """
     marble_names = ('Lucky', 'Spinner', 'Sure Shot', 'The Boss', 'Winner', '5-Star', 'Hercules', 'Apollo', 'Zeus')
 
-    def __init__(self):
+    def __init__(self, connBag, connWrap):
         mp.Process.__init__(self)
         # TODO Add any arguments and variables here
+        self.connBag = connBag
+        self.connWrap = connWrap
+        # self.gift = {}
 
     def run(self):
         '''
@@ -130,13 +164,31 @@ class Assembler(mp.Process):
             sleep the required amount
         tell the wrapper that there are no more gifts
         '''
+        # while 'DONE' not in self.gift:
+        name = random.choice(self.marble_names)
+        gift = self.connBag.recv()
+        gift['large'] = name
+        self.connWrap.send(gift)
+        # print(f'gift: {gift}')
+        # self.gift = self.connBag.recv()
+        # self.gift.append(name)
+        # self.connWrap.send(self.gift)
+        # self.gift.append(self.connBag.recv())
+        
+        # print(f'Assembler gift: {self.gift}')
+        # name.append(self.connBag.recv())
+        # print(f'Assembler recieve: {self.connBag.recv()}')
+            # self.gift.append(self.connBag.recv())
+        # print(self.gift)
 
 
 class Wrapper(mp.Process):
     """ Takes created gifts and wraps them by placing them in the boxes file """
-    def __init__(self):
+    def __init__(self, connBag):
         mp.Process.__init__(self)
         # TODO Add any arguments and variables here
+        self.connBag = connBag
+        self.filename = 'boxes.txt'
 
     def run(self):
         '''
@@ -145,6 +197,16 @@ class Wrapper(mp.Process):
             save gift to the file with the current time
             sleep the required amount
         '''
+        inputted = self.connBag.recv()
+        print(f'wrap recieved: {inputted}')
+        # inputted = " ".join(inputted)
+        
+        marbles = ", ".join(inputted['marbles'])
+        # print(f'time: {datetime.now().time()}')
+        with open('boxes.txt', 'w') as f:
+            f.write("Created - " + str(datetime.now().time()) + ": Large marble: " + inputted['large'] + ', marbles: ' + marbles)
+        
+        
 
 
 def display_final_boxes(filename, log):
@@ -180,24 +242,37 @@ def main():
     log.write(f'settings["wrapper-delay"]   = {settings[WRAPPER_DELAY]}')
 
     # TODO: create Pipes between creator -> bagger -> assembler -> wrapper
-
+    creat2bag, bag2create = mp.Pipe()
+    bag2assem, assem2bag = mp.Pipe()
+    assem2wrap, wrap2assem = mp.Pipe()
     # TODO create variable to be used to count the number of gifts
-
+    gift_count = 0
     # delete final boxes file
     if os.path.exists(BOXES_FILENAME):
         os.remove(BOXES_FILENAME)
 
     log.write('Create the processes')
-
+    MARBLE_COUNT_EX = 10
     # TODO Create the processes (ie., classes above)
-
+    marble = Marble_Creator(creat2bag, MARBLE_COUNT_EX)
+    bagger = Bagger(bag2create, bag2assem, MARBLE_COUNT_EX, settings[BAG_COUNT])
+    assembler = Assembler(assem2bag, assem2wrap)
+    wrapper = Wrapper(wrap2assem,)
+    # marble = mp.Process(target=Marble_Creator, args=(creator,))
+    # bagger_creat = mp.Process(target=Bagger, args=(bagger,))
     log.write('Starting the processes')
     # TODO add code here
-
+    marble.start()
+    bagger.start()
+    assembler.start()
+    wrapper.start()
     log.write('Waiting for processes to finish')
     # TODO add code here
-
-    display_final_boxes(BOXES_FILENAME, log)
+    marble.join()
+    bagger.join()
+    assembler.join()
+    wrapper.join()
+    # display_final_boxes(BOXES_FILENAME, log)
 
     # TODO Log the number of gifts created.
 

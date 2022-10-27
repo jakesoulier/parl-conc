@@ -39,6 +39,7 @@ this dictionary to make other API calls for data.
 """
 
 from datetime import datetime, timedelta
+from unittest import result
 import requests
 import json
 import threading
@@ -90,35 +91,51 @@ def main():
     sixthFilm = film_six(url.response)
 
     # TODO Display results
-    print(f'Title: ', sixthFilm['title'])
-    print(f'Director: ', sixthFilm['director'])
-    print(f'Producer: ', sixthFilm['producer'])
-    print(f'Released: ', sixthFilm['release_date'])
-    print(f'Characters: ', len(sixthFilm['characters']))
+    # print(f'Title: ', sixthFilm['title'])
+    # print(f'Director: ', sixthFilm['director'])
+    # print(f'Producer: ', sixthFilm['producer'])
+    # print(f'Released: ', sixthFilm['release_date'])
+    # print(f'Characters: ', len(sixthFilm['characters']))
     # print(sixthFilm['characters'])
     
     """"GROUP ASSIGNMENT"""""
-    """create one pool"""
+    """create one pool""" 
     pool = mp.Pool(mp.cpu_count())
     
-    
-    peoples = []
-    people = []
-    for i in range(len(sixthFilm['characters'])):
-        # pool.apply_async(sixthFilm['characters'])
-        person = myThread(sixthFilm['characters'][i])
-        person.start()
-        people.append(person)
+    # create dict to store results
+    results = {'characters': [], 'planets': [], 'starships': [], 'species': [], 'vehicles': []}
+    for category in results.keys():
+        
+        for person in sixthFilm[category]:
+          pool.apply_async(film_six, args=(category,)) # people was changed from characters
+          results[category].append(person)
+        
+    print(results)
+#     data = {"house": ["http//localhost:8080/1", "http//localhost:8080/2", "http//localhost:8080/3"],
+#             "car": ["http//localhost:8080/4", "http//localhost:8080/5", "http//localhost:8080/6"],
+#             "boat": ["http//localhost:8080/7", "http//localhost:8080/8", "http//localhost:8080/9"]}
+
+#     results = {'house': [], 'car': [], 'boat': []}
+
+#     for category in results.keys():
+#         print(f'category={category}')
+#         for url in data[category]:
+#             print(f'url={url}')
+#             # append pool.apply_async(call_url, args=(url, call_count))
+#             results[category].append(url)
+
+#     print(f'{results=}')
+    """
     for x in people:
         x.join()
         peoples.append(x.response['name'])
     people_org = sorted(peoples)
-    print(', '.join(people_org))
+    # print(', '.join(people_org))
     # for person in people_org:
     #   print(person, end=", ")
     # Planets
     # print()
-    print(f'Planets: ', len(sixthFilm['planets']))
+    # print(f'Planets: ', len(sixthFilm['planets']))
     planets = []
     all_planets = []
     for i in range(len(sixthFilm['planets'])):
@@ -129,12 +146,13 @@ def main():
       planet.join()
       all_planets.append(planet.response['name'])
     planets_org = sorted(all_planets)
-    print(', '.join(planets_org))
+    # print(', '.join(planets_org))
     # for planet in planets_org:
     #   print(planet, end= ", ")
     # Starships
     # print()
-    print(f'Starships: ', len(sixthFilm['starships']))
+    # print(f'Starships: ', len(sixthFilm['starships']))
+    
     stars = []
     star_ships = []
     for i in range(len(sixthFilm['starships'])):
@@ -145,12 +163,12 @@ def main():
       star.join()
       star_ships.append(star.response['name'])
     star_org = sorted(star_ships) 
-    print(', '.join(star_org))
+    # print(', '.join(star_org))
     # for star in star_org:
     #   print(star, end=", ")
     # Vehicles
     # print()
-    print(f'Vehicles: ', len(sixthFilm['vehicles']))
+    # print(f'Vehicles: ', len(sixthFilm['vehicles']))
     stars = []
     star_ships = []
     for i in range(len(sixthFilm['vehicles'])):
@@ -161,12 +179,12 @@ def main():
       star.join()
       star_ships.append(star.response['name'])
     vehicle_org = sorted(star_ships)
-    print(', '.join(vehicle_org))
+    # print(', '.join(vehicle_org))
     # for vehicle in vehicle_org:
     #   print(vehicle, end=", ")
     # Species 
     # print()
-    print(f'Species: ', len(sixthFilm['species']))
+    # print(f'Species: ', len(sixthFilm['species']))
     stars = []
     star_ships = []
     for i in range(len(sixthFilm['species'])):
@@ -177,7 +195,8 @@ def main():
       star.join()
       star_ships.append(star.response['name'])
     species_org = sorted(star_ships)
-    print(', '.join(species_org))
+    """
+    # print(', '.join(species_org))
     # for species in species_org:
     #   print(species, end=", ")
 
@@ -188,3 +207,29 @@ def main():
 if __name__ == "__main__":
     main()
  
+
+
+# def call_url(url):
+#     print(f'{url=}')
+
+
+# def main():
+
+#     data = {"house": ["http//localhost:8080/1", "http//localhost:8080/2", "http//localhost:8080/3"],
+#             "car": ["http//localhost:8080/4", "http//localhost:8080/5", "http//localhost:8080/6"],
+#             "boat": ["http//localhost:8080/7", "http//localhost:8080/8", "http//localhost:8080/9"]}
+
+#     results = {'house': [], 'car': [], 'boat': []}
+
+#     for category in results.keys():
+#         print(f'category={category}')
+#         for url in data[category]:
+#             print(f'url={url}')
+#             # append pool.apply_async(call_url, args=(url, call_count))
+#             results[category].append(url)
+
+#     print(f'{results=}')
+
+
+# if __name__ == "__main__":
+#     main()
