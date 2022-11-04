@@ -47,8 +47,12 @@ def solve_path(maze, path):
         moves = maze.get_possible_moves(row, col)
         # print(f'moves: {moves}')
         if len(moves) == 0 or moves in path:
+            # for item in path:
+            # print(f'path to restore: {path}')
+            # for item in path:
+            #     maze.restore(item[0], item[1])
             maze.restore(row, col)
-            path.pop()
+            path = []
         if moves not in path and len(moves) > 0:
             # path.append(moves[0])
             for x in range(len(moves)):
