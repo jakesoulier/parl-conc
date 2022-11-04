@@ -1,0 +1,10 @@
+15:39:56| Marble count                = 1000
+15:39:56| settings["creator-delay"]   = 0.01
+15:39:56| settings["bag-count"]       = 7
+15:39:56| settings["bagger-delay"]    = 0.05
+15:39:56| settings["assembler-delay"] = 0.05
+15:39:56| settings["wrapper-delay"]   = 0.05
+15:39:56| Create the processes
+15:39:56| Starting the processes
+15:39:56| Waiting for processes to finish
+15:39:57| ERROR: The file boxes.txt doesn't exist.  No boxes were created.
