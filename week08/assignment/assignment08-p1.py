@@ -26,14 +26,35 @@ COLOR = (0, 0, 255)
 
 # TODO add any functions
 
-def solve_path(maze):
+def solve_path(maze, path):
     """ Solve the maze and return the path found between the start and end positions.  
         The path is a list of positions, (x, y) """
         
     # TODO start add code here
-    path = []
-    return path
-
+    
+    # start position
+    if len(path) == 0:
+        path.append(maze.start_pos)
+    row = path[-1][0]
+    col = path[-1][1]
+    maze.move(row, col, (255, 0, 0))
+    # base case
+    if maze.at_end(row, col):
+        print('You reached the end!')
+        print(f'path to return: {path}')
+        return path
+    else:
+        moves = maze.get_possible_moves(row, col)
+        # print(f'moves: {moves}')
+        if len(moves) == 0 or moves in path:
+            maze.restore(row, col)
+            path.pop()
+        if moves not in path and len(moves) > 0:
+            # path.append(moves[0])
+            for x in range(len(moves)):
+                path.append(moves[x])
+                solve_path(maze, path)
+    # return path 
 
 def get_path(log, filename):
     """ Do not change this function """
@@ -43,9 +64,9 @@ def get_path(log, filename):
     screen.background((255, 255, 0))
 
     maze = Maze(screen, SCREEN_SIZE, SCREEN_SIZE, filename)
-
-    path = solve_path(maze)
-
+    give_path = []
+    path = solve_path(maze, give_path)
+    print(f'get_path {path=}')
     log.write(f'Number of drawing commands for = {screen.get_command_count()}')
 
     done = False
@@ -74,10 +95,13 @@ def find_paths(log):
 
     log.write('*' * 40)
     log.write('Part 1')
+    count = 0
     for filename in files:
         log.write()
         log.write(f'File: {filename}')
         path = get_path(log, filename)
+        print(f'path {path}, count {count}')
+        count += 1
         log.write(f'Found path has length          = {len(path)}')
     log.write('*' * 40)
 

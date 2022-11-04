@@ -42,6 +42,7 @@ from datetime import datetime, timedelta
 import requests
 import json
 import threading
+import multiprocessing as mp
 
 # Include cse 251 common Python files
 from cse251 import *
@@ -66,14 +67,6 @@ class myThread(threading.Thread):
         print(f'URL: {self.url}')
         response = requests.get(self.url)
         self.response = response.json()
-        # self.film_six()
-        # print(self.response)
-        # return self.response
-
-    # def film_six(self):
-    #     film = self.response['films'] + '6'
-    #     print(film)
-
 
 # TODO Add any functions you need here
 def film_six(homepage):
@@ -103,9 +96,16 @@ def main():
     print(f'Released: ', sixthFilm['release_date'])
     print(f'Characters: ', len(sixthFilm['characters']))
     # print(sixthFilm['characters'])
+    
+    """"GROUP ASSIGNMENT"""""
+    """create one pool"""
+    pool = mp.Pool(mp.cpu_count())
+    
+    
     peoples = []
     people = []
     for i in range(len(sixthFilm['characters'])):
+        # pool.apply_async(sixthFilm['characters'])
         person = myThread(sixthFilm['characters'][i])
         person.start()
         people.append(person)
@@ -144,7 +144,7 @@ def main():
     for star in stars:
       star.join()
       star_ships.append(star.response['name'])
-    star_org = sorted(star_ships)
+    star_org = sorted(star_ships) 
     print(', '.join(star_org))
     # for star in star_org:
     #   print(star, end=", ")

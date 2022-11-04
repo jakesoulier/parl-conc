@@ -143,9 +143,12 @@ class Assembler(mp.Process):
         Sends the completed gift to the wrapper """
     marble_names = ('Lucky', 'Spinner', 'Sure Shot', 'The Boss', 'Winner', '5-Star', 'Hercules', 'Apollo', 'Zeus')
 
-    def __init__(self):
+    def __init__(self, connBag, connWrap):
         mp.Process.__init__(self)
         # TODO Add any arguments and variables here
+        self.connBag = connBag
+        self.connWrap = connWrap
+        # self.gift = {}
 
     def run(self):
         '''
@@ -155,13 +158,31 @@ class Assembler(mp.Process):
             sleep the required amount
         tell the wrapper that there are no more gifts
         '''
+        # while 'DONE' not in self.gift:
+        name = random.choice(self.marble_names)
+        gift = self.connBag.recv()
+        gift['large'] = name
+        self.connWrap.send(gift)
+        # print(f'gift: {gift}')
+        # self.gift = self.connBag.recv()
+        # self.gift.append(name)
+        # self.connWrap.send(self.gift)
+        # self.gift.append(self.connBag.recv())
+        
+        # print(f'Assembler gift: {self.gift}')
+        # name.append(self.connBag.recv())
+        # print(f'Assembler recieve: {self.connBag.recv()}')
+            # self.gift.append(self.connBag.recv())
+        # print(self.gift)
 
 
 class Wrapper(mp.Process):
     """ Takes created gifts and wraps them by placing them in the boxes file """
-    def __init__(self):
+    def __init__(self, connBag):
         mp.Process.__init__(self)
         # TODO Add any arguments and variables here
+        self.connBag = connBag
+        self.filename = 'boxes.txt'
 
     def run(self):
         '''
@@ -170,6 +191,16 @@ class Wrapper(mp.Process):
             save gift to the file with the current time
             sleep the required amount
         '''
+        inputted = self.connBag.recv()
+        print(f'wrap recieved: {inputted}')
+        # inputted = " ".join(inputted)
+        
+        marbles = ", ".join(inputted['marbles'])
+        # print(f'time: {datetime.now().time()}')
+        with open('boxes.txt', 'w') as f:
+            f.write("Created - " + str(datetime.now().time()) + ": Large marble: " + inputted['large'] + ', marbles: ' + marbles)
+        
+        
 
 
 def display_final_boxes(filename, log):
