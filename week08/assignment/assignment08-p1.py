@@ -52,7 +52,7 @@ def solve_path(maze, path):
             for x in range(len(moves)):
                 path.append(moves[x])
                 solve_path(maze, path)
-    # return path
+    return path
 
 def get_path(log, filename):
     """ Do not change this function """
