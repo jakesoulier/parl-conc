@@ -26,35 +26,28 @@ COLOR = (0, 0, 255)
 
 # TODO add any functions
 
-def solve_path(maze, path):
+def solve_path(maze, path, row, col):
     """ Solve the maze and return the path found between the start and end positions.  
         The path is a list of positions, (x, y) """
         
-    # TODO start add code here
-    
     # start position
     if len(path) == 0:
-        path.append(maze.start_pos)
-    row = path[-1][0]
-    col = path[-1][1]
-    maze.move(row, col, (255, 0, 0))
+        maze.move(row, col, (255, 0, 0))
+
     # base case
     if maze.at_end(row, col):
-        print('You reached the end!')
-        print(f'path to return: {path}')
-        return path
+        print(f'You reached the end! {path=}')
+        return True
     else:
         moves = maze.get_possible_moves(row, col)
-        # print(f'moves: {moves}')
-        if len(moves) == 0 or moves in path:
-            maze.restore(row, col)
-            path.pop()
-        if moves not in path and len(moves) > 0:
-            # path.append(moves[0])
-            for x in range(len(moves)):
-                path.append(moves[x])
-                solve_path(maze, path)
-    # return path 
+        for move in moves:
+            if maze.can_move_here(move[0], move[1]):
+                maze.move(move[0], move[1], (255, 0, 0))
+                path.append(move)
+                if solve_path(maze, path, move[0], move[1]):
+                    return path
+                maze.restore(move[0], move[1])
+                path.remove(move)
 
 def get_path(log, filename):
     """ Do not change this function """
@@ -65,7 +58,9 @@ def get_path(log, filename):
 
     maze = Maze(screen, SCREEN_SIZE, SCREEN_SIZE, filename)
     give_path = []
-    path = solve_path(maze, give_path)
+    row = maze.start_pos[0]
+    col = maze.start_pos[1]
+    path = solve_path(maze, give_path, row, col)
     print(f'get_path {path=}')
     log.write(f'Number of drawing commands for = {screen.get_command_count()}')
 

@@ -72,12 +72,31 @@ def get_color():
     return color
 
 
-def solve_find_end(maze):
+def solve_find_end(maze, path, row, col, color):
     """ finds the end position using threads.  Nothing is returned """
     # When one of the threads finds the end position, stop all of them
+    while True:
+        # start position
+        if len(path) == 0:
+            # path.append(maze.start_pos)
+            maze.move(row, col, (255, 0, 0))
 
-    pass
-
+        # base case
+        if maze.at_end(row, col):
+            print(f'You reached the end! {path=}')
+            break
+        else:
+            moves = maze.get_possible_moves(row, col)
+            for move in moves:
+                if maze.can_move_here(move[0], move[1]):
+                    maze.move(move[0], move[1], color)
+                    path.append(move)
+                    newPath = threading.Thread(target=solve_find_end, args=(maze, path, move[0], move[1], color))
+                    newPath.start()
+                    newPath.join()
+                    color = get_color()
+                    path.remove(move)
+            break # if path is incorrect, stop that thread
 
 def find_end(log, filename, delay):
     """ Do not change this function """
@@ -89,8 +108,13 @@ def find_end(log, filename, delay):
     screen.background((255, 255, 0))
 
     maze = Maze(screen, SCREEN_SIZE, SCREEN_SIZE, filename, delay=delay)
-
-    solve_find_end(maze)
+    path = []
+    color = (255, 0, 0)
+    row = maze.start_pos[0]
+    col = maze.start_pos[1]
+    print('find_end')
+    solve_find_end(maze, path, row, col, color)
+    print('after solved')
 
     log.write(f'Number of drawing commands = {screen.get_command_count()}')
     log.write(f'Number of threads created  = {thread_count}')
