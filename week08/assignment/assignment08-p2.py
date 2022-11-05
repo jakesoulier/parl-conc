@@ -75,7 +75,11 @@ def get_color():
 def solve_find_end(maze, path, row, col, color):
     """ finds the end position using threads.  Nothing is returned """
     # When one of the threads finds the end position, stop all of them
+
     while True:
+        global stop
+        if stop is True:
+            return False
         # start position
         if len(path) == 0:
             # path.append(maze.start_pos)
@@ -84,6 +88,7 @@ def solve_find_end(maze, path, row, col, color):
         # base case
         if maze.at_end(row, col):
             print(f'You reached the end! {path=}')
+            stop = True
             break
         else:
             moves = maze.get_possible_moves(row, col)
@@ -151,10 +156,12 @@ def find_ends(log):
 
     log.write('*' * 40)
     log.write('Part 2')
+    global stop
     for filename, delay in files:
         log.write()
         log.write(f'File: {filename}')
         find_end(log, filename, delay)
+        stop = False
     log.write('*' * 40)
 
 
