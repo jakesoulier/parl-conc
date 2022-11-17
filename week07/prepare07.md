@@ -82,7 +82,7 @@ if __name__ == "__main__":
     log.start_timer()
     pool = mp.Pool(4)
     results = [pool.apply_async(sum_all_values, args=(x,)) for x in range(10000, 10000 + 10)]
-
+    
     # do something else
 
     # collect all of the results into a list

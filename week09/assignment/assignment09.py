@@ -2,7 +2,7 @@
 Course: CSE 251
 Lesson Week: 09
 File: assingnment.py
-Author: <Your name here>
+Author: Jake Soulier
 Purpose: Process Task Files
 
 Instructions:  See I-Learn
@@ -62,7 +62,12 @@ def task_prime(value):
             - or -
         {value} is not prime
     """
-    pass
+    if is_prime(value):
+        # print(f'{value} is prime')
+        result_primes.append(f'{value} is prime')
+    else:
+        # print(f'{value} is not prime')
+        pass
 
 def task_word(word):
     """
@@ -72,7 +77,10 @@ def task_word(word):
             - or -
         {word} not found *****
     """
-    pass
+    with open('words.txt', 'r') as f:
+        # for line in f:
+        print(f'line: {f}')
+    # pass
 
 def task_upper(text):
     """
@@ -104,6 +112,9 @@ def main():
     log.start_timer()
 
     # TODO Create process pools
+    pool = mp.Pool(4)
+    # print(f'pool: {pool}')
+    # results = [pool.apply_async(sum_all_values, args=(x,)) for x in range(10000, 10000 + 10)]
 
     count = 0
     task_files = glob.glob("*.task")
@@ -111,12 +122,12 @@ def main():
         # print()
         # print(filename)
         task = load_json_file(filename)
-        print(task)
+        # print(task)
         count += 1
         task_type = task['task']
-        if task_type == TYPE_PRIME:
+        if task_type == TYPE_PRIME: # if 'task': "" = 'prime'
             task_prime(task['value'])
-        elif task_type == TYPE_WORD:
+        elif task_type == TYPE_WORD: # if 'task': "" = 'word'
             task_word(task['word'])
         elif task_type == TYPE_UPPER:
             task_upper(task['text'])
