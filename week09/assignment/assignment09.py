@@ -78,23 +78,24 @@ def task_word(word):
         {word} not found *****
     """
     with open('words.txt', 'r') as f:
-        # for line in f:
-        print(f'line: {f}')
-    # pass
+        contents = f.read()
+        if word in contents:
+            result_words.append(f'{word} is in the text file')
 
 def task_upper(text):
     """
     Add the following to the global list:
         {text} ==>  uppercase version of {text}
     """
-    pass
+    result_upper.append(text.upper())
 
 def task_sum(start_value, end_value):
     """
     Add the following to the global list:
         sum of {start_value:,} to {end_value:,} = {total:,}
     """
-    pass
+    total = start_value + end_value
+    result_sums.append(f'sum of {start_value:,} to {end_value:,} = {total:,}')
 
 def task_name(url):
     """
@@ -104,8 +105,13 @@ def task_name(url):
             - or -
         {url} had an error receiving the information
     """
-    pass
-
+    response = requests.get(url)
+    responseJson = response.json()
+    if responseJson != None: 
+        name = responseJson['name']
+        result_names.append(f'{url} has name {name}')
+    else:
+        result_names.append(f'{url} had an error receiving the information')
 
 def main():
     log = Log(show_terminal=True)
@@ -125,6 +131,7 @@ def main():
         # print(task)
         count += 1
         task_type = task['task']
+        # print(task_type)
         if task_type == TYPE_PRIME: # if 'task': "" = 'prime'
             task_prime(task['value'])
         elif task_type == TYPE_WORD: # if 'task': "" = 'word'
