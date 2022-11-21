@@ -66,11 +66,8 @@ def task_prime(value):
     """
 
     if is_prime(value):
-        # print(f'{value} is prime')
-        # result_primes.append(f'{value} is prime')
         return (f'{value} is prime')
     else:
-        # print(f'{value} is not prime')
         return (f'{value} is not prime')
 
 def task_word(word):
@@ -81,7 +78,6 @@ def task_word(word):
     with open('words.txt', 'r') as f:
         contents = f.read()
         if word in contents:
-            # result_words.append(f'{word} is in the text file')
             return (f'{word} is in the text file')
 
 def task_upper(text):
@@ -108,7 +104,6 @@ def task_name(url):
         name = responseJson['name']
         return (f'{url} has name {name}')
     else:
-        # result_names.append(f'{url} had an error receiving the information')
         return (f'{url} had an error receiving the information')
 
 """
