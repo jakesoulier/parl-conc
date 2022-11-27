@@ -1,0 +1,6 @@
+16:28:08| Return values from create_threads:
+	actual_from_class=45, actual_from_thread_mod=45
+16:28:08| Return values from create_threads:
+	actual_from_class=78, actual_from_thread_mod=78
+16:28:08| Return values from create_threads:
+	actual_from_class=136, actual_from_thread_mod=136

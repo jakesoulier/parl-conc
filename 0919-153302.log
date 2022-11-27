@@ -1,0 +1,9 @@
+15:33:02| Return values from create_threads:
+	actual_from_class=45, actual_from_thread_mod=145
+15:33:02| ERROR: Test #2 failed, check console for reason
+15:33:02| Return values from create_threads:
+	actual_from_class=78, actual_from_thread_mod=247
+15:33:02| ERROR: Test #2 failed, check console for reason
+15:33:02| Return values from create_threads:
+	actual_from_class=136, actual_from_thread_mod=425
+15:33:02| ERROR: Test #2 failed, check console for reason
