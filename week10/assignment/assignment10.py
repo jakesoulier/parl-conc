@@ -92,12 +92,13 @@ def main():
     # room = manager.dict()
     # room[0]
     lock = mp.Lock()
+    guest_lock = mp.Lock()
 
     cleaned_count = mp.Value('d', 0)
     party_count = mp.Value('d', 0)
     room = mp.Value('d', 0)
     clean = mp.Process(target=cleaner, args=(cleaned_count, room, lock, start_time))
-    party = mp.Process(target=guest, args=(party_count, room, lock, start_time))
+    party = mp.Process(target=guest, args=(party_count, room, lock, start_time, guest_lock))
 
     clean.start()
     party.start()
