@@ -1,0 +1,29 @@
+Current: active threads / max count: 1 / 1
+Request: /
+Sending: {"start_family_id": 5006267986}
+Current: active threads / max count: 1 / 1
+Request: /start/6
+Creating family tree with 6 generations...
+Number of people  : 267
+Number of families: 46
+Sending: {"status":"OK"}
+Current: active threads / max count: 1 / 1
+Request: /end
+################################################################################
+Total number of people  : 267
+Total number of families: 46
+Number of generations   : 6
+Families were requested in this order:
+
+Total number of API calls: 2
+Final thread count (max count): 1
+################################################################################
+Sending: {"status":"OK"}
+Current: active threads / max count: 1 / 1
+Request: /
+Sending: {"start_family_id": 5006267986}
+Current: active threads / max count: 1 / 1
+Request: /favicon.ico
+Sending: {"start_family_id": 5006267986}
+Current: active threads / max count: 1 / 1
+Request: /family

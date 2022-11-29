@@ -42,7 +42,10 @@ from common import *
 # -----------------------------------------------------------------------------
 def depth_fs_pedigree(family_id, tree):
     # TODO - implement Depth first retrieval
-
+    print(f'family id: {family_id}')
+    print(f'tree: {tree}')
+    family = Request_thread(f'{TOP_API_URL}/family/{family_id}')
+    print(f'family: {family}')
     print('WARNING: DFS function not written')
 
     pass
