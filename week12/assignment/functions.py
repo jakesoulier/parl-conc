@@ -42,13 +42,32 @@ from common import *
 # -----------------------------------------------------------------------------
 def depth_fs_pedigree(family_id, tree):
     # TODO - implement Depth first retrieval
-    print(f'family id: {family_id}')
-    print(f'tree: {tree}')
-    family = Request_thread(f'{TOP_API_URL}/family/{family_id}')
-    print(f'family: {family}')
-    print('WARNING: DFS function not written')
+    # family = Request_thread(f'{TOP_API_URL}/family/{family_id}')
+    # family.start()
+    # family.join()
+    # fam = family.response
+    # print(f'family: {fam}')
 
-    pass
+    # add family to tree, need to join here to get the response
+    family_t = Request_thread(f'{TOP_API_URL}/family/{family_id}')
+    family_t.start()
+    family_t.join()
+    if("id" not in family_t.response):
+        return
+    family = Family(family_id, family_t.response)
+    # print(f'fam: {family}')
+    if(not tree.does_family_exist(family)):
+        tree.add_family(family)
+    # print(f'tree: {tree.people}')
+    # tree.add_family(family_id)
+    # print(f'tree fam: {tree.families}')
+    # person = Request_thread(f'{TOP_API_URL}/person/{family_id}')
+    # person.start()
+    # person.join()
+    # people = person.response
+    # print(f'person: {people}')
+    # tree.add_person(person.response)
+    # print(f'tree: {tree.people}')
 
 # -----------------------------------------------------------------------------
 def breadth_fs_pedigree(start_id, tree):

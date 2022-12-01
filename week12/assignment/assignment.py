@@ -20,7 +20,7 @@ BFS = 'Breadth First Search'
 BFS5 = 'Breadth First Search limit 5'
 
 def run_part(log, start_id, generations, title, func):
-    tree = Tree(start_id)
+    tree = Tree(start_id)   
 
     req = Request_thread(f'{TOP_API_URL}/start/{generations}')
     req.start()

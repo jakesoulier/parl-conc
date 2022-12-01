@@ -232,4 +232,3 @@ class Request_thread(threading.Thread):
             self.response = response.json()
         else:
             print('RESPONSE = ', response.status_code)
-

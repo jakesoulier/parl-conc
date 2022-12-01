@@ -88,7 +88,7 @@ def main():
 
     # TODO Retireve Details on film 6
     sixthFilm = film_six(url.response)
-
+    print(f'we here boy: {sixthFilm}')
     # TODO Display results
     print(f'Title: ', sixthFilm['title'])
     print(f'Director: ', sixthFilm['director'])
