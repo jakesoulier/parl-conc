@@ -41,12 +41,16 @@ from common import *
 
 # -----------------------------------------------------------------------------
 def depth_fs_pedigree(family_id, tree):
-    # TODO - implement Depth first retrieval
-    # family = Request_thread(f'{TOP_API_URL}/family/{family_id}')
-    # family.start()
-    # family.join()
-    # fam = family.response
-    # print(f'family: {fam}')
+    # add person to tree
+    print(f'fam id: {family_id}')
+    person_t = Request_thread(f'{TOP_API_URL}/person/{family_id}')
+    person_t.start()
+    person_t.join()
+    if("id" not in person_t.response):
+        return
+    person = Person(person_t.response)
+    if(not tree.does_person_exist(person)):
+        tree.add_person(person)
 
     # add family to tree, need to join here to get the response
     family_t = Request_thread(f'{TOP_API_URL}/family/{family_id}')
@@ -55,19 +59,13 @@ def depth_fs_pedigree(family_id, tree):
     if("id" not in family_t.response):
         return
     family = Family(family_id, family_t.response)
-    # print(f'fam: {family}')
-    if(not tree.does_family_exist(family)):
-        tree.add_family(family)
-    # print(f'tree: {tree.people}')
-    # tree.add_family(family_id)
-    # print(f'tree fam: {tree.families}')
-    # person = Request_thread(f'{TOP_API_URL}/person/{family_id}')
-    # person.start()
-    # person.join()
-    # people = person.response
-    # print(f'person: {people}')
-    # tree.add_person(person.response)
-    # print(f'tree: {tree.people}')
+    print(family.children)
+    # if(not tree.does_family_exist(family)):
+    #     tree.add_family(family)
+    for kid in family.children:
+        print(kid)
+        # depth_fs_pedigree(kid, tree)
+        # pass
 
 # -----------------------------------------------------------------------------
 def breadth_fs_pedigree(start_id, tree):
