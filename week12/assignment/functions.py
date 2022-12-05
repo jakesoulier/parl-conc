@@ -49,6 +49,7 @@ def depth_fs_pedigree(family_id, tree):
     if("id" not in person_t.response):
         return
     person = Person(person_t.response)
+    print(f'person: {person}')
     if(not tree.does_person_exist(person)):
         tree.add_person(person)
 
@@ -59,12 +60,14 @@ def depth_fs_pedigree(family_id, tree):
     if("id" not in family_t.response):
         return
     family = Family(family_id, family_t.response)
-    print(family.children)
+    # print(family.children)
     # if(not tree.does_family_exist(family)):
     #     tree.add_family(family)
-    for kid in family.children:
-        print(kid)
-        # depth_fs_pedigree(kid, tree)
+
+
+    # for kid in family.children:
+    #     print(kid)
+    #     depth_fs_pedigree(kid, tree)
         # pass
 
 # -----------------------------------------------------------------------------

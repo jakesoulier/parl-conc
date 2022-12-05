@@ -1,1144 +1,296 @@
 Current: active threads / max count: 1 / 1
 Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 252
-Number of families: 40
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 252
-Total number of families: 40
-Number of generations   : 6
-Families were requested in this order:
-
-Total number of API calls: 2
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
+Sending: {"start_family_id": 5005547842}
 Current: active threads / max count: 1 / 1
 Request: /
-Sending: {"start_family_id": 5001435541}
+Sending: {"start_family_id": 5005547842}
 Current: active threads / max count: 1 / 1
 Request: /start/6
 Creating family tree with 6 generations...
-Number of people  : 290
-Number of families: 51
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 290
-Total number of families: 51
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 337
-Number of families: 55
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349]}
-Current: active threads / max count: 1 / 1
-Request: /person/%3Cbuilt-in%20function%20id%3E
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 337
-Total number of families: 55
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 186
-Number of families: 32
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Christopher", "birth": "11-1-1933", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 186
-Total number of families: 32
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 139
-Number of families: 24
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349, 5019519637]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 139
-Total number of families: 24
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 218
-Number of families: 39
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 218
-Total number of families: 39
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 334
-Number of families: 57
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349, 5019519637]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Ezra", "birth": "12-3-1833", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 334
-Total number of families: 57
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 162
-Number of families: 28
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349, 5019519637]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Wyatt", "birth": "6-4-1850", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 264
-Number of families: 45
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": []}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Jaxon", "birth": "10-3-1877", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 264
-Total number of families: 45
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 262
-Number of families: 44
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349, 5019519637]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Aiden", "birth": "22-7-1984", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 262
-Total number of families: 44
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 281
-Number of families: 45
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349, 5019519637]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Leo", "birth": "14-12-1874", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 312
-Number of families: 50
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Elijah", "birth": "9-6-1952", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 312
-Total number of families: 50
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 327
-Number of families: 58
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "David", "birth": "12-9-1907", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 189
-Number of families: 29
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Jayden", "birth": "18-5-2017", "parent_id": null, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 346
-Number of families: 57
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Mason", "birth": "25-1-1932", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 346
-Total number of families: 57
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 339
-Number of families: 58
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Luke", "birth": "30-4-1855", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 194
-Number of families: 31
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Michael", "birth": "31-7-1912", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 194
-Total number of families: 31
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 139
-Number of families: 28
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Lucas", "birth": "28-2-1978", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 263
-Number of families: 44
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Aiden", "birth": "18-5-1980", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 263
-Total number of families: 44
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 359
-Number of families: 60
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541]}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 313
-Number of families: 50
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637]}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Jack", "birth": "12-8-1942", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 313
-Total number of families: 50
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 162
-Number of families: 25
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349, 5019519637]}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 131
-Number of families: 21
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397]}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 324
-Number of families: 50
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 324
-Total number of families: 50
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 250
-Number of families: 41
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349, 5019519637]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 250
-Total number of families: 41
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 239
-Number of families: 40
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493]}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 260
-Number of families: 45
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637]}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 340
+Number of people  : 377
 Number of families: 53
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349]}
+Request: /person/5005547842
+Sending: {"id": 5005547842, "name": "William", "birth": "18-5-1954", "parent_id": 5012128853, "family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /family/5005547842
+Sending: {"id": 5005547842, "husband_id": 5005547842, "wife_id": 5012128853, "children": [5017678696, 5024005755, 5029537038, 4969025537, 4974567188, 4980886055, 4987482426]}
 Current: active threads / max count: 1 / 1
 Request: /end
 ################################################################################
-Total number of people  : 340
+Total number of people  : 377
 Total number of families: 53
 Number of generations   : 6
 Families were requested in this order:
 1
-Total number of API calls: 3
+Total number of API calls: 4
 Final thread count (max count): 1
 ################################################################################
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
 Request: /
-Sending: {"start_family_id": 5001435541}
+Sending: {"start_family_id": 5005547842}
 Current: active threads / max count: 1 / 1
 Request: /start/6
 Creating family tree with 6 generations...
-Number of people  : 163
-Number of families: 28
+Number of people  : 230
+Number of families: 36
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397]}
+Request: /person/5005547842
+Sending: {"id": 5005547842, "name": "Luke", "birth": "4-8-1832", "parent_id": 5012128853, "family_id": 5005547842}
 Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 205
-Number of families: 37
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637]}
+Request: /family/5005547842
+Sending: {"id": 5005547842, "husband_id": 5005547842, "wife_id": 5012128853, "children": [5017678696, 5024005755, 5029537038, 4969025537, 4974567188, 4980886055]}
 Current: active threads / max count: 1 / 1
 Request: /end
 ################################################################################
-Total number of people  : 205
-Total number of families: 37
+Total number of people  : 230
+Total number of families: 36
 Number of generations   : 6
 Families were requested in this order:
 1
-Total number of API calls: 3
+Total number of API calls: 4
 Final thread count (max count): 1
 ################################################################################
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
 Request: /
-Sending: {"start_family_id": 5001435541}
+Sending: {"start_family_id": 5005547842}
 Current: active threads / max count: 1 / 1
 Request: /start/6
 Creating family tree with 6 generations...
-Number of people  : 233
-Number of families: 37
+Number of people  : 121
+Number of families: 21
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349]}
+Request: /person/5005547842
+Sending: {"id": 5005547842, "name": "Oliver", "birth": "17-1-1837", "parent_id": null, "family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /family/5005547842
+Sending: {"id": 5005547842, "husband_id": 5005547842, "wife_id": 5012128853, "children": [5017678696, 5024005755, 5029537038, 4969025537, 4974567188]}
 Current: active threads / max count: 1 / 1
 Request: /end
 ################################################################################
-Total number of people  : 233
-Total number of families: 37
+Total number of people  : 121
+Total number of families: 21
 Number of generations   : 6
 Families were requested in this order:
 1
-Total number of API calls: 3
+Total number of API calls: 4
 Final thread count (max count): 1
 ################################################################################
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
 Request: /
-Sending: {"start_family_id": 5001435541}
+Sending: {"start_family_id": 5005547842}
 Current: active threads / max count: 1 / 1
 Request: /start/6
 Creating family tree with 6 generations...
-Number of people  : 257
-Number of families: 46
+Number of people  : 256
+Number of families: 47
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541]}
+Request: /person/5005547842
+Sending: {"id": 5005547842, "name": "Leo", "birth": "5-2-1912", "parent_id": 5012128853, "family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /family/5005547842
+Sending: {"id": 5005547842, "husband_id": 5005547842, "wife_id": 5012128853, "children": [5017678696, 5024005755, 5029537038, 4969025537, 4974567188, 4980886055]}
 Current: active threads / max count: 1 / 1
 Request: /end
 ################################################################################
-Total number of people  : 257
-Total number of families: 46
+Total number of people  : 256
+Total number of families: 47
 Number of generations   : 6
 Families were requested in this order:
 1
-Total number of API calls: 3
+Total number of API calls: 4
 Final thread count (max count): 1
 ################################################################################
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
 Request: /
-Sending: {"start_family_id": 5001435541}
+Sending: {"start_family_id": 5005547842}
 Current: active threads / max count: 1 / 1
 Request: /start/6
 Creating family tree with 6 generations...
-Number of people  : 187
-Number of families: 31
+Number of people  : 343
+Number of families: 57
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349, 5019519637]}
+Request: /person/5005547842
+Sending: {"id": 5005547842, "name": "Wyatt", "birth": "5-6-1837", "parent_id": 5012128853, "family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /family/5005547842
+Sending: {"id": 5005547842, "husband_id": 5005547842, "wife_id": 5012128853, "children": []}
 Current: active threads / max count: 1 / 1
 Request: /end
 ################################################################################
-Total number of people  : 187
-Total number of families: 31
+Total number of people  : 343
+Total number of families: 57
 Number of generations   : 6
 Families were requested in this order:
 1
-Total number of API calls: 3
+Total number of API calls: 4
 Final thread count (max count): 1
 ################################################################################
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
 Request: /
-Sending: {"start_family_id": 5001435541}
+Sending: {"start_family_id": 5005547842}
 Current: active threads / max count: 1 / 1
 Request: /start/6
 Creating family tree with 6 generations...
-Number of people  : 351
+Number of people  : 361
+Number of families: 58
+Sending: {"status":"OK"}
+Current: active threads / max count: 1 / 1
+Request: /person/5005547842
+Sending: {"id": 5005547842, "name": "Liam", "birth": "24-10-1852", "parent_id": 5012128853, "family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /family/5005547842
+Sending: {"id": 5005547842, "husband_id": 5005547842, "wife_id": 5012128853, "children": []}
+Current: active threads / max count: 1 / 1
+Request: /end
+################################################################################
+Total number of people  : 361
+Total number of families: 58
+Number of generations   : 6
+Families were requested in this order:
+1
+Total number of API calls: 4
+Final thread count (max count): 1
+################################################################################
+Sending: {"status":"OK"}
+Current: active threads / max count: 1 / 1
+Request: /
+Sending: {"start_family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /start/6
+Creating family tree with 6 generations...
+Number of people  : 308
+Number of families: 53
+Sending: {"status":"OK"}
+Current: active threads / max count: 1 / 1
+Request: /person/5005547842
+Sending: {"id": 5005547842, "name": "Christopher", "birth": "18-12-1796", "parent_id": 5012128853, "family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /family/5005547842
+Sending: {"id": 5005547842, "husband_id": 5005547842, "wife_id": 5012128853, "children": [5017678696, 5024005755, 5029537038]}
+Current: active threads / max count: 1 / 1
+Request: /end
+################################################################################
+Total number of people  : 308
+Total number of families: 53
+Number of generations   : 6
+Families were requested in this order:
+1
+Total number of API calls: 4
+Final thread count (max count): 1
+################################################################################
+Sending: {"status":"OK"}
+Current: active threads / max count: 1 / 1
+Request: /
+Sending: {"start_family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /start/6
+Creating family tree with 6 generations...
+Number of people  : 298
+Number of families: 44
+Sending: {"status":"OK"}
+Current: active threads / max count: 1 / 1
+Request: /person/5005547842
+Sending: {"id": 5005547842, "name": "Benjamin", "birth": "24-4-1770", "parent_id": 5012128853, "family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /family/5005547842
+Sending: {"id": 5005547842, "husband_id": 5005547842, "wife_id": 5012128853, "children": [5017678696, 5024005755, 5029537038]}
+Current: active threads / max count: 1 / 1
+Request: /end
+################################################################################
+Total number of people  : 298
+Total number of families: 44
+Number of generations   : 6
+Families were requested in this order:
+1
+Total number of API calls: 4
+Final thread count (max count): 1
+################################################################################
+Sending: {"status":"OK"}
+Current: active threads / max count: 1 / 1
+Request: /
+Sending: {"start_family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /start/6
+Creating family tree with 6 generations...
+Number of people  : 243
+Number of families: 44
+Sending: {"status":"OK"}
+Current: active threads / max count: 1 / 1
+Request: /person/5005547842
+Sending: {"id": 5005547842, "name": "Oliver", "birth": "10-1-1862", "parent_id": 5012128853, "family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /family/5005547842
+Sending: {"id": 5005547842, "husband_id": 5005547842, "wife_id": 5012128853, "children": [5017678696, 5024005755, 5029537038, 4969025537, 4974567188]}
+Current: active threads / max count: 1 / 1
+Request: /end
+################################################################################
+Total number of people  : 243
+Total number of families: 44
+Number of generations   : 6
+Families were requested in this order:
+1
+Total number of API calls: 4
+Final thread count (max count): 1
+################################################################################
+Sending: {"status":"OK"}
+Current: active threads / max count: 1 / 1
+Request: /
+Sending: {"start_family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /start/6
+Creating family tree with 6 generations...
+Number of people  : 301
 Number of families: 55
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637]}
+Request: /person/5005547842
+Sending: {"id": 5005547842, "name": "Lucas", "birth": "27-4-1957", "parent_id": 5012128853, "family_id": 5005547842}
+Current: active threads / max count: 1 / 1
+Request: /family/5005547842
+Sending: {"id": 5005547842, "husband_id": 5005547842, "wife_id": 5012128853, "children": [5017678696, 5024005755, 5029537038, 4969025537, 4974567188]}
 Current: active threads / max count: 1 / 1
 Request: /end
 ################################################################################
-Total number of people  : 351
+Total number of people  : 301
 Total number of families: 55
 Number of generations   : 6
 Families were requested in this order:
 1
-Total number of API calls: 3
+Total number of API calls: 4
 Final thread count (max count): 1
 ################################################################################
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
 Request: /
-Sending: {"start_family_id": 5001435541}
+Sending: {"start_family_id": 5005547842}
 Current: active threads / max count: 1 / 1
 Request: /start/6
 Creating family tree with 6 generations...
-Number of people  : 106
-Number of families: 19
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 106
-Total number of families: 19
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 124
-Number of families: 19
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 124
-Total number of families: 19
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 360
-Number of families: 54
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 360
-Total number of families: 54
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 337
-Number of families: 56
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 337
-Total number of families: 56
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 183
-Number of families: 30
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 183
-Total number of families: 30
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 222
-Number of families: 39
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 222
-Total number of families: 39
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 202
-Number of families: 39
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Jayden", "birth": "1-6-1861", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 196
-Number of families: 31
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Anthony", "birth": "12-1-1838", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 196
-Total number of families: 31
-Number of generations   : 6
-Families were requested in this order:
-
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 330
-Number of families: 58
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Lincoln", "birth": "24-10-1804", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 330
-Total number of families: 58
-Number of generations   : 6
-Families were requested in this order:
-
-Total number of API calls: 3
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 145
+Number of people  : 121
 Number of families: 24
 Sending: {"status":"OK"}
 Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Alexander", "birth": "5-10-1955", "parent_id": null, "family_id": 5001435541}
+Request: /person/5005547842
+Sending: {"id": 5005547842, "name": "Benjamin", "birth": "25-2-1923", "parent_id": null, "family_id": 5005547842}
 Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637]}
+Request: /family/5005547842
+Sending: {"id": 5005547842, "husband_id": 5005547842, "wife_id": 5012128853, "children": [5017678696]}
 Current: active threads / max count: 1 / 1
 Request: /end
 ################################################################################
-Total number of people  : 145
+Total number of people  : 121
 Total number of families: 24
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 284
-Number of families: 43
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Lincoln", "birth": "16-1-1954", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 284
-Total number of families: 43
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 370
-Number of families: 62
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Leo", "birth": "30-11-1984", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 370
-Total number of families: 62
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 334
-Number of families: 54
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Thomas", "birth": "15-2-1940", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 334
-Total number of families: 54
-Number of generations   : 6
-Families were requested in this order:
-1
-Total number of API calls: 4
-Final thread count (max count): 1
-################################################################################
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 238
-Number of families: 38
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Mason", "birth": "6-8-1882", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541]}
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 156
-Number of families: 25
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Noah", "birth": "18-12-1849", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397, 5009243541, 5011449493, 5013663637, 5014837397, 5017043349, 5019519637]}
-Current: active threads / max count: 1 / 1
-Request: /person/5005855637
-Sending: {"id": 5005855637, "name": "Jack", "birth": "5-3-1979", "parent_id": null, "family_id": null}
-Current: active threads / max count: 1 / 1
-Request: /family/5005855637
-Sending: {"id": 5005855637, "husband_id": 4971668629, "wife_id": 4973882773, "children": [4975056533, 4977270677, 4979476629, 5020693397]}
-Current: active threads / max count: 1 / 1
-Request: /person/4975056533
-Sending: {"id": 4975056533, "name": "Emilia", "birth": "29-2-1944", "parent_id": null, "family_id": null}
-Current: active threads / max count: 1 / 1
-Request: /family/4975056533
-Sending: {"id": 4975056533, "husband_id": 4927451029, "wife_id": 4929673365, "children": [4931879317, 5268589205, 5270811541, 5273287829, 5274445205, 5276659349, 4919643029]}
-Current: active threads / max count: 1 / 1
-Request: /person/4931879317
-Sending: {"id": 4931879317, "name": "Gabriel", "birth": "6-9-1849", "parent_id": null, "family_id": null}
-Current: active threads / max count: 1 / 1
-Request: /family/4931879317
-Current: active threads / max count: 1 / 1
-Request: /person/5268589205
-Sending: {"id": 5268589205, "name": "Samuel", "birth": "27-8-1946", "parent_id": null, "family_id": null}
-Current: active threads / max count: 1 / 1
-Request: /family/5268589205
-Current: active threads / max count: 1 / 1
-Request: /person/5270811541
-Sending: {"id": 5270811541, "name": "Emilia", "birth": "22-1-2007", "parent_id": null, "family_id": null}
-Current: active threads / max count: 1 / 1
-Request: /family/5270811541
-Current: active threads / max count: 1 / 1
-Request: /person/5273287829
-Sending: {"id": 5273287829, "name": "Lily", "birth": "5-7-1758", "parent_id": null, "family_id": null}
-Current: active threads / max count: 1 / 1
-Request: /family/5273287829
-Current: active threads / max count: 1 / 1
-Request: /person/5274445205
-Sending: {"id": 5274445205, "name": "Audrey", "birth": "12-1-1890", "parent_id": null, "family_id": null}
-Current: active threads / max count: 1 / 1
-Request: /family/5274445205
-Current: active threads / max count: 1 / 1
-Request: /person/5276659349
-Sending: {"id": 5276659349, "name": "Everly", "birth": "26-12-1975", "parent_id": null, "family_id": null}
-Current: active threads / max count: 1 / 1
-Request: /family/5276659349
-Current: active threads / max count: 1 / 1
-Request: /person/4919643029
-Sending: {"id": 4919643029, "name": "Samuel", "birth": "9-4-1854", "parent_id": 4975056533, "family_id": 4973882773}
-Current: active threads / max count: 1 / 1
-Request: /family/4919643029
-Current: active threads / max count: 1 / 1
-Request: /person/4977270677
-Sending: {"id": 4977270677, "name": "Isaac", "birth": "6-3-1882", "parent_id": null, "family_id": null}
-Current: active threads / max count: 1 / 1
-Request: /family/4977270677
-Sending: {"id": 4977270677, "husband_id": 5278881685, "wife_id": 5281087637, "children": [5282253205, 4921865365]}
-Current: active threads / max count: 1 / 1
-Request: /person/5282253205
-Sending: {"id": 5282253205, "name": "Avery", "birth": "24-7-1808", "parent_id": null, "family_id": null}
-Current: active threads / max count: 1 / 1
-Request: /family/5282253205
-Current: active threads / max count: 1 / 1
-Request: /person/4921865365
-Sending: {"id": 4921865365, "name": "Emily", "birth": "25-5-1807", "parent_id": 4977270677, "family_id": 4973882773}
-Current: active threads / max count: 1 / 1
-Request: /family/4921865365
-Current: active threads / max count: 1 / 1
-Request: /
-Sending: {"start_family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /start/6
-Creating family tree with 6 generations...
-Number of people  : 197
-Number of families: 28
-Sending: {"status":"OK"}
-Current: active threads / max count: 1 / 1
-Request: /person/5001435541
-Sending: {"id": 5001435541, "name": "Josiah", "birth": "19-8-1921", "parent_id": 5003641493, "family_id": 5001435541}
-Current: active threads / max count: 1 / 1
-Request: /family/5001435541
-Sending: {"id": 5001435541, "husband_id": 5001435541, "wife_id": 5003641493, "children": [5005855637, 5007029397]}
-Current: active threads / max count: 1 / 1
-Request: /end
-################################################################################
-Total number of people  : 197
-Total number of families: 28
 Number of generations   : 6
 Families were requested in this order:
 1

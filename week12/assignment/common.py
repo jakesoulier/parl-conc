@@ -150,8 +150,10 @@ class Tree:
             # children
             output = []
             for index, child_id in enumerate(fam.children):
-                person = self.people[child_id]
-                output.append(f'{person.name}')
+                print(f'child_id {child_id}')
+                print(f'person: {self.people}')
+                # person = self.people[child_id]
+                # output.append(f'{person.name}')
             out_str = str(output).replace("'", '', 100)
             log.write(f'  Children: {out_str[1:-1]}')
 
