@@ -73,6 +73,7 @@ class Tree:
         if self.does_family_exist(family.id):
             print(f'ERROR: Family with ID = {family.id} Already exists in the tree')
         else:
+            print(f'family abouttobeadded to families: {family}')
             self.families[family.id] = family
 
     def get_person(self, id):
@@ -109,6 +110,7 @@ class Tree:
 
             # Husband
             husband = self.get_person(fam.husband)
+            print(f'husband in common - {husband}')
             if husband == None:
                 log.write(f'  Husband: None')
             else:
@@ -122,16 +124,22 @@ class Tree:
                 log.write(f'  Wife: {wife.name}, {wife.birth}')
 
             # Parents of Husband
+            print(f'HUBBY {husband}')
             if husband == None:
+                print('NONEAPARENTY')
                 log.write(f'  Husband Parents: None')
             else:
+                print(f'WE GOTSOMETHING: {husband.parents}')
+                print(f'self.families - {self.families}')
                 parent_fam_id = husband.parents
                 if parent_fam_id in self.families:
+                    print('BUT NOT QUITE HERE')
                     parent_fam = self.get_family(parent_fam_id)
                     father = self.get_person(parent_fam.husband)
                     mother = self.get_person(parent_fam.wife)
                     log.write(f'  Husband Parents: {father.name} and {mother.name}')
                 else:
+                    print('NOT COOL')
                     log.write(f'  Husband Parents: None')
 
             # Parents of Wife
@@ -150,10 +158,10 @@ class Tree:
             # children
             output = []
             for index, child_id in enumerate(fam.children):
-                print(f'child_id {child_id}')
-                print(f'person: {self.people}')
-                # person = self.people[child_id]
-                # output.append(f'{person.name}')
+                # print(f'child_id {child_id}')
+                # print(f'person: {self.people}')
+                person = self.people[child_id]
+                output.append(f'{person.name}')
             out_str = str(output).replace("'", '', 100)
             log.write(f'  Children: {out_str[1:-1]}')
 
