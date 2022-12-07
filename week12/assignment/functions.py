@@ -41,150 +41,121 @@ from common import *
 
 # -----------------------------------------------------------------------------
 def depth_fs_pedigree(family_id, tree):
-    if family_id == None:
+    if family_id == None: # checks if family exists
         return
+    # get family from server
     family_t = Request_thread(f'{TOP_API_URL}/family/{family_id}')
     family_t.start()
     family_t.join()
-    print(family_t.response)
-    if("id" not in family_t.response):
-        return
-    person = Person(family_t.response)
-    family = Family(family_id, person)
+    family = Family(family_id, family_t.response)
+    # add family to tree
     tree.add_family(family)
-
-    person_t = Request_thread(f'{TOP_API_URL}/person/{family.husband}')
-    person_t.start()
-    # person_t.join()
-    person2_t = Request_thread(f'{TOP_API_URL}/person/{family.wife}')
-    person2_t.start()
-
+    # get husband from server
+    husband_t = Request_thread(f'{TOP_API_URL}/person/{family.husband}')
+    husband_t.start()
+    # get wife from server
+    wife_t = Request_thread(f'{TOP_API_URL}/person/{family.wife}')
+    wife_t.start()
+    # get kids from server
     kid_threads = []
     for kid in family.children:
         kid_t = Request_thread(f'{TOP_API_URL}/person/{kid}')
         kid_t.start()
         kid_threads.append(kid_t)
-
-    person_t.join()
-    response1 = person_t.response
-    print(f'{response1=}')
-    tree.add_person(response1)
-
-    person2_t.join()
-    response2 = person2_t.response
-    print(f'{response2=}')
-    tree.add_person(response2)
-
+    # add husband to tree
+    husband_t.join()
+    response_hus = husband_t.response
+    if(not tree.does_person_exist(response_hus['id'])):
+        husband = Person(response_hus)
+        tree.add_person(husband)
+    # call function with parents id
+    recurs_t = threading.Thread(target=depth_fs_pedigree, args=(husband.parents, tree))
+    recurs_t.start()
+    # add wife to tree
+    wife_t.join()
+    response_wif = wife_t.response
+    if(not tree.does_person_exist(response_wif['id'])):
+        wife = Person(response_wif)
+        tree.add_person(wife)
+    # call function with wife parents id
+    recurs_t_w = threading.Thread(target=depth_fs_pedigree, args=(wife.parents, tree))
+    recurs_t_w.start()
+    # add kids to tree
     for t in kid_threads:
         t.join()
         response3 = t.response
-        if(not tree.does_person_exist(response3)):
-            tree.add_person(response3)
+        if(not tree.does_person_exist(response3['id'])):
+            child = Person(response3)
+            tree.add_person(child)
 
-
-
-    #MY ATTEMPT
-    # if family_id == None:
-    #     return
-        
-    # # count gen
-    # gen = tree._count_generations(family_id)
-    # # print(gen)
-    # # print(f'fam_id! {family_id}')
-    # # get person
-    # person_t = Request_thread(f'{TOP_API_URL}/person/{family_id}')
-    # person_t.start()
-    # person_t.join()
-    # if("id" not in person_t.response):
-    #     return
-    # person = Person(person_t.response)
-    # # print(f'PERSON {person}')
-    # # add person
-    # if(not tree.does_person_exist(person)):
-    #     # print(f'ADD {person.name}')
-    #     tree.add_person(person)
-    # # print(f'PERS - {person}')
-    # # parent_t = Request_thread(f'{TOP_API_URL}/family/{person.parents}')
-    # # parent_t.start()
-    # # parent_t.join()
-    # # if("id" not in parent_t.response):
-    # #     return
-    # # parent = Family(person.parents, parent_t.response)
-    # # print(f'PARENT? {parent} for {person.name}')
-    # # if(not tree.does_person_exist(parent)):
-    # #     print(f'PARENT TO ADD? {parent.id}')
-    # #     depth_fs_pedigree(parent, tree)
-
-
-    # #add parents
-    # # print(f'PERSON PARENT {person.parents}')
-    # # if(person.parents != None):
-    # #     depth_fs_pedigree(person.parents, tree)
-    # # else:
-    # #     print('no parent id')
-
-    # # get parents
-    # # parent_fam_t = Request_thread(f'{TOP_API_URL}/family/{person.parents}')
-    # # parent_fam_t.start()
-    # # parent_fam_t.join()
-    # # if("id" not in parent_fam_t.response):
-    # #     return
-    # # parent_fam = Family(person.family, parent_fam_t.response)
-    # # print(f'PARENT FAM: {parent_fam}')
-    # # get family
-    # family_t = Request_thread(f'{TOP_API_URL}/family/{person.family}')
-    # family_t.start()
-    # family_t.join()
-    # if("id" not in family_t.response):
-    #     return
-    # family = Family(family_id, family_t.response)
-    
-    # # add wife
-    # # print(f'WIFE COUNT- {family.wife}')
-    # if(not tree.does_person_exist(family.wife)):
-    #     depth_fs_pedigree(family.wife, tree)
-
-    # # add husband parents
-    
-
-    # # add children
-    # for child in family.children:
-    #     if(not tree.does_person_exist(child)):
-    #         depth_fs_pedigree(child, tree)
-
-    # # add family
-    # # print(f'FAMILIES {family}')
-    # if(not tree.does_family_exist(family)):
-    #     tree.add_family(family)
-
-    #dads parents
-    # print(f'PERSON: {person}')
-    # print(f'PERSONPARENTS: {person.parents}')
-    # depth_fs_pedigree(person.parents, tree)
-    # parent_t = Request_thread(f'{TOP_API_URL}/person/{person.parents}')
-    # parent_t.start()
-    # parent_t.join()
-    # if("id" not in parent_t.response):
-    #     return
-    # parent = Person(parent_t.response)
-    # print(f'parent!: {parent}')
+    recurs_t.join()
+    recurs_t_w.join()
     
 import queue
 def createFamily(family_id, q, tree):
-    pass 
-    # copy dps code
+    if family_id == None: # checks if family exists
+        return
+    # get family from server
+    family_t = Request_thread(f'{TOP_API_URL}/family/{family_id}')
+    family_t.start()
+    family_t.join()
+    family = Family(family_id, family_t.response)
+    # add family to tree
+    tree.add_family(family)
+    # get husband from server
+    husband_t = Request_thread(f'{TOP_API_URL}/person/{family.husband}')
+    husband_t.start()
+    # get wife from server
+    wife_t = Request_thread(f'{TOP_API_URL}/person/{family.wife}')
+    wife_t.start()
+    # get kids from server
+    kid_threads = []
+    for kid in family.children:
+        kid_t = Request_thread(f'{TOP_API_URL}/person/{kid}')
+        kid_t.start()
+        kid_threads.append(kid_t)
+    # add husband to tree
+    husband_t.join()
+    response_hus = husband_t.response
+    if(not tree.does_person_exist(response_hus['id'])):
+        husband = Person(response_hus)
+        tree.add_person(husband)
+    # checks if husband has parents
+    if husband.parents != None:
+        q.put(husband.parents) # add parents to queue
 
+    # add wife to tree
+    wife_t.join()
+    response_wif = wife_t.response
+    if(not tree.does_person_exist(response_wif['id'])):
+        wife = Person(response_wif)
+        tree.add_person(wife)
+    # checks if wife has parents
+    # checks if no more parents exist
+    if wife.parents != None or (wife.parents == None and husband.parents == None):
+        q.put(wife.parents) # adds wife parents to queue
+    # add kids to tree
+    for t in kid_threads:
+        t.join()
+        response3 = t.response
+        if(not tree.does_person_exist(response3['id'])):
+            child = Person(response3)
+            tree.add_person(child)
+    
 # -----------------------------------------------------------------------------
 def breadth_fs_pedigree(start_id, tree):
     # TODO - implement breadth first retrieval
 
+    # starts queue
     q = queue.Queue()
     q.put(start_id)
     threads = []
-    while True:
+    while True: # keeps looping until no more parents exist
         start_id = q.get()
+        # stops loop
         if start_id == None:
             break
+        # calls function
         t = threading.Thread(target=createFamily, args=(start_id, q, tree))
         t.start()
         threads.append(t)
@@ -196,6 +167,29 @@ def breadth_fs_pedigree(start_id, tree):
 def breadth_fs_pedigree_limit5(start_id, tree):
     # TODO - implement breadth first retrieval
     #      - Limit number of concurrent connections to the FS server to 5
-    pass
+    q = queue.Queue()
+    q.put(start_id)
+    threads = []
+    lock = threading.Lock()
+    while True: # keeps looping until no more parents exist
+        start_id = q.get()
+        # stops loop
+        if start_id == None:
+            break
+        # calls function
+        t = threading.Thread(target=createFamily, args=(start_id, q, tree))
+        t.start()
+        threads.append(t)
+        if len(threads) == 5:
+            lock.acquire()
+            for x in range(5):
+                t.join()
+                threads.pop(0)
+            # print(f'{threads}')
+            lock.release()
+    length = len(threads)
+    # print(f'{length=}')
+    for t in threads:
+        t.join()
     
 
