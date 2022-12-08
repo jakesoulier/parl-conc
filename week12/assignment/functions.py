@@ -1,7 +1,7 @@
 """
 Course: CSE 251, week 12
 File: common.py
-Author: <your name>
+Author: Jake Soulier
 
 Instructions:
 
@@ -24,12 +24,18 @@ and part 2 code below
 
 Describe how to speed up part 1
 
-<Add your comments here>
+The main thing I did to speed up part 1 was using threads. The function would run
+the needed tasks then call itself using recursion. To speed this up, I recalled the
+function with a thread. I then did not start all the threads until later in the function.
+I also used threads to get each person from the server. That way, I could
+start each call and later join it so I had concurrency.
 
 
 Describe how to speed up part 2
 
-<Add your comments here>
+Part 2 was similar code. But, instead of using recursion, I just kept calling the function in 
+a seperate loop and stopped the loop when both the wife and husband did not have any parents to
+go to. It was speed up by still using threads to call the function everytime.
 
 
 10% Bonus to speed up part 3
